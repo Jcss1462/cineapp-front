@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cine-app-8ba39": {
+      "hosting": {
+        "cineapp-front": [
+          "cine-app-8ba39"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cine-app-8ba39"
+  }
+}

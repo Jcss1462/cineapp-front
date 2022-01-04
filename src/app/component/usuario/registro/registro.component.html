@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="row">
+
+        <form class="col-md-6"  #f="ngForm" (ngSubmit)="save()" >
+            
+            <div class="row">
+
+                <div class="form-group col-md-12">
+                    <label class="title"><b>Registro</b></label>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label>Email</label>
+                    <input  required type="email" name="email" class="form-control"  [(ngModel)]="usuario.email">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label>Contaseña</label>
+                    <input required type="password" name="contraseña"  class="form-control"   [(ngModel)]="usuario.password">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label>Nombre</label>
+                    <input required type="text" name="nombre" class="form-control"  [(ngModel)]="usuario.nombre">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>CC</label>
+                    <input type="number" name="identificacion"  required  class="form-control" [(ngModel)]="usuario.identificacion">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" name="nacimiento"  required  class="form-control"  [(ngModel)]="usuario.fechaNacimiento" >
+                </div>
+                
+
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+
+</div>
