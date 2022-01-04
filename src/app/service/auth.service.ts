@@ -6,7 +6,8 @@ import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
   User,
-  signInWithEmailAndPassword
+  signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -44,6 +45,12 @@ export class AuthService {
   public logInFirebase(email: string, password: string) {
     this.auth = getAuth();
     return signInWithEmailAndPassword(this.auth, email, password);
+  }
+
+  public signOutFirebase():Promise<void>{
+    this.auth = getAuth();
+    localStorage.removeItem('usuario');
+    return signOut(this.auth);
   }
 
 
