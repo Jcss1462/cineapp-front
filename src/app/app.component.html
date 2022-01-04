@@ -1,7 +1,10 @@
 <nav class="navbar navbar-dark bg-dark justify-content-between">
-  
+
   <b><a class="navbar-brand">Cine-APP</a></b>
-  <button type="button" class="btn btn-light" [routerLink]="['/registro-usuario']"> Registrar Usuario</button> 
-  
+  <div>
+    <button type="button" class="btn btn-light" [routerLink]="['/registro-usuario']"> Registrar Usuario</button>
+    <button type="button" class="btn btn-light" [routerLink]="['/login']">Login</button>
+  </div>
+
 </nav>
 <router-outlet></router-outlet>

@@ -5,7 +5,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   sendEmailVerification,
-  User
+  User,
+  signInWithEmailAndPassword
 } from "firebase/auth";
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -39,5 +40,11 @@ export class AuthService {
   public saveUsuarioBackend(usuario:Usuario):Observable<any>{
     return this.httpClient.post(this.url+'save',usuario);
   }
+
+  public logInFirebase(email: string, password: string) {
+    this.auth = getAuth();
+    return signInWithEmailAndPassword(this.auth, email, password);
+  }
+
 
 }
