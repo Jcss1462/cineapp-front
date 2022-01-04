@@ -4,6 +4,7 @@
   <div>
     <button *ngIf="!isAuth()" type="button" class="btn btn-light" [routerLink]="['/registro-usuario']"> Sign-in</button>
     <button *ngIf="!isAuth()" type="button" class="btn btn-light" [routerLink]="['/login']">Login</button>
+    <button *ngIf="isAuth()" type="button" class="btn btn-light" [routerLink]="['/misMetodos']">Métodos de pago</button>
     <button *ngIf="isAuth()" type="button" class="btn btn-light" (click)="logOut()" >Log-out</button>
   </div>
 

@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="form-group col-md-12">
+            <label class="title"><b>Mis métodos de pago</b>&nbsp;<i style="color:rgb(0, 155, 155)" class="fas fa-plus-circle"></i></label>
+        </div>
+        <div class="form-group col-md-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Numero de tarjeta</th>
+                        <th>Fecha de vencimiento</th>
+                        <th>Nombre trajetahabiente</th>
+                        <th>Enable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let metodo of misMetodos; index as i">
+                      <td>{{metodo.numeroTarjeta}}</td>
+                      <td>{{metodo.fechaExpiracion}}</td>
+                      <td>{{metodo.nombreTarjetahabiente}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+
+    </div>
+
+
+</div>

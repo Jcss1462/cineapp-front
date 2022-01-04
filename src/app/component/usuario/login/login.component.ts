@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
       }else{
         //guardo el email del usuario en el local storage 
         localStorage.setItem("usuario",this.email);
+        this.succesMessage("Sesión iniciada con éxito");
       }
 
     }).catch((error) => {

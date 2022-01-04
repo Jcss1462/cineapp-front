@@ -23,12 +23,16 @@ import { ToastrModule } from 'ngx-toastr';
 //component
 import { RegistroComponent } from './component/usuario/registro/registro.component';
 import { LoginComponent } from './component/usuario/login/login.component';
+import { MisMetodosComponent } from './component/metodosDePago/mis-metodos/mis-metodos.component';
+import { NuevoMetodoComponent } from './component/metodosDePago/nuevo-metodo/nuevo-metodo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
-    LoginComponent
+    LoginComponent,
+    MisMetodosComponent,
+    NuevoMetodoComponent
   ],
   imports: [
     BrowserModule,
